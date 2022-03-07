@@ -34,6 +34,7 @@ class EncryptionPage(seldom.TestCase):
         self.log.debug(f"服务器返回结果：{self.response}")
         # 将返回的数据密钥赋值给dataKey
         self.dataKey = self.response['data']
+        return self.dataKey
 
     def encrypt_data(self, dataKey, plaintext_data):
         """
@@ -49,7 +50,7 @@ class EncryptionPage(seldom.TestCase):
         """
 
         # 数据加密地址
-        url = Basic.URL + "/api/encryptData"
+        url = Basic.URL + "/risen-pcip-sm/api/public/api/encryptData"
 
         body = {
             "appCode": self.appCode,
@@ -58,7 +59,8 @@ class EncryptionPage(seldom.TestCase):
         }
         self.log.debug(f"发送post请求，请求地址{url}, 请求参数{body}")
         self.post(url=url, headers= self.headers, json=body)
-        self.log.debug(f"服务器返回结果：{self.response.text}")
+        self.log.debug(f"服务器返回结果：{self.response}")
+        return self.response['data']
 
     def decrypt_data(self, dataKey, ciphertext_data):
         """
@@ -67,7 +69,7 @@ class EncryptionPage(seldom.TestCase):
         :param ciphertext_data:密文数据
         :return:
         """
-        url = Basic.URL + "/api/decryptData"
+        url = Basic.URL + "/risen-pcip-sm/api/public/api/decryptData"
         body = {
             "appCode": self.appCode,
             "dataKey": dataKey,
@@ -75,7 +77,7 @@ class EncryptionPage(seldom.TestCase):
         }
         self.log.debug(f"发送post请求，请求地址{url}, 请求参数{body}")
         self.post(url=url, headers=self.headers, json=body)
-        self.log.debug(f"服务器返回结果：{self.response.text}")
+        self.log.debug(f"服务器返回结果：{self.response}")
 
 
 

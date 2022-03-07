@@ -1,0 +1,18 @@
+[32m2022-03-07 16:10:17 [INFO] 
+              __    __              
+   ________  / /___/ /___  ____ ____ 
+  / ___/ _ \/ / __  / __ \/ __ ` ___/
+ (__  )  __/ / /_/ / /_/ / / / / / /
+/____/\___/_/\__,_/\____/_/ /_/ /_/ 
+-----------------------------------------
+                             @itest.info
+[0m
+2022-03-07 16:10:17 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 2}
+2022-03-07 16:10:18 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': '0098c96f5f78814f0644c807a2909da2'}, {'dataKey': 'c99ea29c5b6fecf9588e8caae6628a29'}], 'code': 200}
+2022-03-07 16:10:18 [DEBUG] 返回的密钥[{'dataKey': '0098c96f5f78814f0644c807a2909da2'}, {'dataKey': 'c99ea29c5b6fecf9588e8caae6628a29'}]
+2022-03-07 16:10:18 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 2}
+2022-03-07 16:10:18 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': 'd0aab61cbd3f3decc57cc2e37eda9bf5'}, {'dataKey': '6333c77e49870e72758e48187978d55c'}], 'code': 200}
+2022-03-07 16:10:18 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/api/encryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': {'dataKey': 'd0aab61cbd3f3decc57cc2e37eda9bf5'}, 'data': '123'}
+2022-03-07 16:10:18 [DEBUG] 服务器返回结果：{}
+[36m2022-03-07 16:10:18 [PRINT] generated html file: file:///D:\study\seldom_encryption_decryption\reports\2022_03_07_16_10_16_result.html[0m
+[36m2022-03-07 16:10:18 [PRINT] generated log file: file:///D:\study\seldom_encryption_decryption\reports\2022_03_07_16_10_16_log.log[0m

@@ -1,0 +1,56 @@
+[32m2022-03-07 17:57:20 [INFO] 
+              __    __              
+   ________  / /___/ /___  ____ ____ 
+  / ___/ _ \/ / __  / __ \/ __ ` ___/
+ (__  )  __/ / /_/ / /_/ / / / / / /
+/____/\___/_/\__,_/\____/_/ /_/ /_/ 
+-----------------------------------------
+                             @itest.info
+[0m
+2022-03-07 17:57:20 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 2}
+2022-03-07 17:57:20 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': '9a452deced78885daa21949812b4e6f9'}, {'dataKey': '295712b52752ea61f36e1a3ed36ddbe7'}], 'code': 200}
+2022-03-07 17:57:20 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': '9a452deced78885daa21949812b4e6f9', 'data': '14782638746324'}
+2022-03-07 17:57:20 [DEBUG] 服务器返回结果：{'message': '成功', 'data': 'abd405f21283c4cc855f623777dd940e', 'code': 200}
+2022-03-07 17:57:20 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/decryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': '9a452deced78885daa21949812b4e6f9', 'data': 'abd405f21283c4cc855f623777dd940e'}
+2022-03-07 17:57:20 [DEBUG] 服务器返回结果：{'message': '成功', 'data': '14782638746324', 'code': 200}
+2022-03-07 17:57:20 [DEBUG] 解密后的明文数据14782638746324
+2022-03-07 17:57:20 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 2}
+2022-03-07 17:57:20 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': '3b53ff5e0ca4e1404f7239155e95cc29'}, {'dataKey': '8361748101deddb926c6c28135255c9c'}], 'code': 200}
+2022-03-07 17:57:20 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': '3b53ff5e0ca4e1404f7239155e95cc29', 'data': 'hdsisahdiasd'}
+2022-03-07 17:57:21 [DEBUG] 服务器返回结果：{'message': '成功', 'data': 'adca6953e394b2ef7dce3ae355b6a30d', 'code': 200}
+2022-03-07 17:57:21 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/decryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': '3b53ff5e0ca4e1404f7239155e95cc29', 'data': 'adca6953e394b2ef7dce3ae355b6a30d'}
+2022-03-07 17:57:21 [DEBUG] 服务器返回结果：{'message': '成功', 'data': 'hdsisahdiasd', 'code': 200}
+2022-03-07 17:57:21 [DEBUG] 解密后的明文数据hdsisahdiasd
+2022-03-07 17:57:21 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 2}
+2022-03-07 17:57:21 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': 'd0111a549e39c16e96a34d4026f30fca'}, {'dataKey': 'ef134ed65f93fde01805e821aaf6c6f1'}], 'code': 200}
+2022-03-07 17:57:21 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': 'd0111a549e39c16e96a34d4026f30fca', 'data': 'hdsisahdiasd'}
+2022-03-07 17:57:21 [DEBUG] 服务器返回结果：{'message': '成功', 'data': 'bfa27843adf90b354f6f38c373764c4b', 'code': 200}
+2022-03-07 17:57:21 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/decryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': 'd0111a549e39c16e96a34d4026f30fca', 'data': 'bfa27843adf90b354f6f38c373764c4b'}
+2022-03-07 17:57:21 [DEBUG] 服务器返回结果：{'message': '成功', 'data': 'hdsisahdiasd', 'code': 200}
+2022-03-07 17:57:21 [DEBUG] 解密后的明文数据hdsisahdiasd
+2022-03-07 17:57:21 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 2}
+2022-03-07 17:57:21 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': '63873a3c93ca5247b87b9a704a88c3c1'}, {'dataKey': 'cc2048a4828ca77aaeda26a256e6c2ab'}], 'code': 200}
+2022-03-07 17:57:21 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': '63873a3c93ca5247b87b9a704a88c3c1', 'data': '14782638746324'}
+2022-03-07 17:57:21 [DEBUG] 服务器返回结果：{'message': '成功', 'data': '445c77803b332cb1e814dcde43903af5', 'code': 200}
+2022-03-07 17:57:21 [DEBUG] 加密后的明文数据445c77803b332cb1e814dcde43903af5
+2022-03-07 17:57:21 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 2}
+2022-03-07 17:57:21 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': '4acb5239f5b43a7f0715044bca8bb95a'}, {'dataKey': '8c22afd93fb34b5ffb9f1e2e2a553f6a'}], 'code': 200}
+2022-03-07 17:57:21 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': '4acb5239f5b43a7f0715044bca8bb95a', 'data': 'hdsisahdiasd'}
+2022-03-07 17:57:22 [DEBUG] 服务器返回结果：{'message': '成功', 'data': 'b8756074021a6390cac58744434d0b15', 'code': 200}
+2022-03-07 17:57:22 [DEBUG] 加密后的明文数据b8756074021a6390cac58744434d0b15
+2022-03-07 17:57:22 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 2}
+2022-03-07 17:57:22 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': '80d5d8218cd0a817f85ba1559275f449'}, {'dataKey': '0e741cf88d3c5998e445471cbcb9544d'}], 'code': 200}
+2022-03-07 17:57:22 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': '80d5d8218cd0a817f85ba1559275f449', 'data': 'hdsisahdiasd'}
+2022-03-07 17:57:22 [DEBUG] 服务器返回结果：{'message': '成功', 'data': '2df9fdae20b38a7d03c5c4e8a7825fd5', 'code': 200}
+2022-03-07 17:57:22 [DEBUG] 加密后的明文数据2df9fdae20b38a7d03c5c4e8a7825fd5
+2022-03-07 17:57:22 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 1}
+2022-03-07 17:57:22 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': 'b199e90ee4cae0eef0972cb976198687'}], 'code': 200}
+2022-03-07 17:57:22 [DEBUG] 返回的密钥[{'dataKey': 'b199e90ee4cae0eef0972cb976198687'}]
+2022-03-07 17:57:22 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 2}
+2022-03-07 17:57:22 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': '73c9c81378ddbd8874c1e5b6c3ae328d'}, {'dataKey': 'db1d73bcfcf5c01426b9fa27e916080e'}], 'code': 200}
+2022-03-07 17:57:22 [DEBUG] 返回的密钥[{'dataKey': '73c9c81378ddbd8874c1e5b6c3ae328d'}, {'dataKey': 'db1d73bcfcf5c01426b9fa27e916080e'}]
+2022-03-07 17:57:22 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 3}
+2022-03-07 17:57:22 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': 'eb5be1b0784d373774a20a1903b8ec23'}, {'dataKey': 'a9d905acd281810398dde3a43cd46598'}, {'dataKey': '53192fcae120e680dcb8df7a2ad0fe92'}], 'code': 200}
+2022-03-07 17:57:22 [DEBUG] 返回的密钥[{'dataKey': 'eb5be1b0784d373774a20a1903b8ec23'}, {'dataKey': 'a9d905acd281810398dde3a43cd46598'}, {'dataKey': '53192fcae120e680dcb8df7a2ad0fe92'}]
+[36m2022-03-07 17:57:22 [PRINT] generated html file: file:///D:\study\seldom_encryption_decryption\reports\2022_03_07_17_57_18_result.html[0m
+[36m2022-03-07 17:57:22 [PRINT] generated log file: file:///D:\study\seldom_encryption_decryption\reports\2022_03_07_17_57_18_log.log[0m

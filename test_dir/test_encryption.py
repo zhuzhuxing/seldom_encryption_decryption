@@ -10,8 +10,8 @@ class TestEncryption(seldom.TestCase):
 
         
     # @seldom.data([[2],[3],[4]])
-    # @file_data(file='get_key.json', key='size')
-    def test_get_data_key(self, size=2):
+    @file_data(file='get_key.json', key='size')
+    def test_get_data_key(self, size):
         """
         测试获取密钥
         :param size: 获取密钥的个数
@@ -19,10 +19,15 @@ class TestEncryption(seldom.TestCase):
         """
         self.en.get_data_key(int(size))
         self.assertStatusCode(200)
+        # 获得密钥的个数
+        total = len(self.response['data'])
+        self.assertEqual(total, size)
         self.en.log.debug(f"返回的密钥{self.en.dataKey}")
 
 
-    def test_encrypt_data(self, plaintext_data='123'):
+
+    @file_data(file='encrypt_data.json', key="plaintext_data")
+    def test_encrypt_data(self, plaintext_data):
         """
         测试明文数据加密
         :param dataKey:密钥
@@ -32,16 +37,21 @@ class TestEncryption(seldom.TestCase):
         dataKey = self.en.get_data_key(size=2)
         self.en.encrypt_data(dataKey[0]['dataKey'], plaintext_data)
         self.en.log.debug(f"加密后的明文数据{self.en.response['data']}")
+        self.assertStatusCode(200)
 
-    def test_decrypt_data(self):
+    @file_data(file='encrypt_data.json', key='plaintext_data')
+    def test_decrypt_data(self, plaintext_data):
         """解密"""
         # 获取密钥datakey
         datakeys = self.en.get_data_key(size=2)
         dataKey = datakeys[0]['dataKey']
         # 获取加密后的明文数据
-        data = self.en.encrypt_data(dataKey, '123')
+        data = self.en.encrypt_data(dataKey, plaintext_data)
         # 解密
         self.en.decrypt_data(dataKey, data)
+        # 解密后的明文数据
+        data_ = self.en.response['data']
+        self.assertEqual(data_, plaintext_data)
         self.en.log.debug(f"解密后的明文数据{self.en.response['data']}")
 
 

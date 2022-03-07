@@ -2,13 +2,13 @@ import seldom
 from page.encryption_page import EncryptionPage
 from seldom import file_data
 
+
 class TestEncryption(seldom.TestCase):
     """加解密"""
 
     def start(self):
         self.en = EncryptionPage()
 
-        
     # @seldom.data([[2],[3],[4]])
     @file_data(file='get_key.json', key='size')
     def test_get_data_key(self, size):
@@ -23,8 +23,6 @@ class TestEncryption(seldom.TestCase):
         total = len(self.response['data'])
         self.assertEqual(total, size)
         self.en.log.debug(f"返回的密钥{self.en.dataKey}")
-
-
 
     @file_data(file='encrypt_data.json', key="plaintext_data")
     def test_encrypt_data(self, plaintext_data):
@@ -53,8 +51,3 @@ class TestEncryption(seldom.TestCase):
         data_ = self.en.response['data']
         self.assertEqual(data_, plaintext_data)
         self.en.log.debug(f"解密后的明文数据{self.en.response['data']}")
-
-
-
-
-

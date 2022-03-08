@@ -10,19 +10,34 @@ class TestEncryption(seldom.TestCase):
         self.en = EncryptionPage()
 
     # @seldom.data([[2],[3],[4]])
-    @file_data(file='get_key.json', key='size')
-    def test_get_data_key(self, size):
+    @file_data(file='get_key.json', key='normal_size')
+    def test01_get_data_key(self, case, size):
         """
-        测试获取密钥
+        测试获取密钥:正向用例
         :param size: 获取密钥的个数
         :return:
         """
+        self.en.log.debug(case)
         self.en.get_data_key(size)
         self.assertStatusCode(200)
         # 获得密钥的个数
         total = len(self.response['data'])
         self.assertEqual(total, size)
         self.en.log.debug(f"返回的密钥{self.response['data']}")
+
+    @file_data(file='get_key.json', key='abnormal_size')
+    def test02_get_data_key(self,case, size):
+        """
+        测试获取密钥:异常用例
+        :param size: 获取密钥的个数
+        :return:
+        """
+        self.en.log.debug(case)
+        self.en.get_data_key(size)
+        self.assertStatusCode(200)
+        # 获得密钥的个数
+        print(self.response)
+
 
     @file_data(file='encrypt_data.json', key="plaintext_data")
     def test_encrypt_data(self, plaintext_data):

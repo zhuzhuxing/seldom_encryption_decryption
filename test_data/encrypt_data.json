@@ -1,7 +1,12 @@
 {
   "plaintext_data": [
-    ["14782638746324"],
-    ["hdsisahdiasd"],
-    ["hdsisahdiasd"]
+    ["case1: 输入纯数字", 14782638746324],
+    ["case2: 输入正常字符串","hdsisahdiasdss"],
+    ["case3: 输入超长字符串","hdsisahdiasdhdsisahdiasdhdsisahdiasdhdsisahdiasdhdsisahdiasdhdsisahdiasdhdsisahdiasdhdsisahdiasdhdsisahdiasdhdsisahdiasdhdsisahdiasdhdsisahdiasdhdsisahdiasdhdsisahdiasdhdsisahdiasdhdsisahdiasd"],
+    ["case4: 输入数字0", 0],
+    ["case5: 输入None", "None"],
+    ["case6: 输入Ture", "Ture"],
+    ["case7: 输入空字符串", ""],
+    ["case8: 输入空格", " "]
   ]
 }

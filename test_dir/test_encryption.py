@@ -17,12 +17,12 @@ class TestEncryption(seldom.TestCase):
         :param size: 获取密钥的个数
         :return:
         """
-        self.en.get_data_key(int(size))
+        self.en.get_data_key(size)
         self.assertStatusCode(200)
         # 获得密钥的个数
         total = len(self.response['data'])
         self.assertEqual(total, size)
-        self.en.log.debug(f"返回的密钥{self.en.dataKey}")
+        self.en.log.debug(f"返回的密钥{self.response['data']}")
 
     @file_data(file='encrypt_data.json', key="plaintext_data")
     def test_encrypt_data(self, plaintext_data):
@@ -51,3 +51,5 @@ class TestEncryption(seldom.TestCase):
         data_ = self.en.response['data']
         self.assertEqual(data_, plaintext_data)
         self.en.log.debug(f"解密后的明文数据{self.en.response['data']}")
+
+

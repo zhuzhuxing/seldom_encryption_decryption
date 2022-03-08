@@ -456,17 +456,17 @@
                                 
                                 <tr>
                                     <td> Start Time</td>
-                                    <td class="text-right">2022-03-07 17:56:15</td>
+                                    <td class="text-right">2022-03-08 11:26:49</td>
                                 </tr>
                                 
                                 <tr>
                                     <td> Duration</td>
-                                    <td class="text-right">0:00:02.564238</td>
+                                    <td class="text-right">0:00:04.115025</td>
                                 </tr>
                                 
                                 <tr>
                                     <td> Status</td>
-                                    <td class="text-right">Passed:6 Failed:3</td>
+                                    <td class="text-right">Passed:13</td>
                                 </tr>
                                 
                                 <tr>
@@ -520,71 +520,58 @@
                     </tr>
                 </thead>
                 
-<tr class='failClass'>
-    <td>test_encryption.TestEncryption</td>
-    <td>加解密</td>
+<tr class='passClass'>
+    <td>test_batch_encryption.TestBatchEncryption</td>
+    <td>批量加解密</td>
     <td></td>
-    <td>9</td>
-    <td>6</td>
-    <td>3</td>
+    <td>4</td>
+    <td>4</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c1.1',9)">Detail</a></td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1.1',4)">Detail</a></td>
     <td>&nbsp;</td>
 </tr>
 
-<tr id='ft1.1.1' class='none'>
-    <td class='failCase'>
-        <div class='testcase'>test_decrypt_data_0_14782638746324</div>
+<tr id='pt1.1.1' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_batch_decrypt_0</div>
     </td>
     <td style="color: #495057">
-        <div>解密 [with plaintext_data='14782638746324']</div>
+        <div>批量解密接口 [with data=['8273rgdsiff', 'sdhfisdfh28395743']]</div>
     </td>
     <td style="color: #495057">
-        <div>0.39 s</div>
+        <div>0.37 s</div>
     </td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1.1')" >
-        fail</a>
-    <div id='div_ft1.1.1' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1.1')" >
+        pass</a>
+    <div id='div_pt1.1.1' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1.1').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1.1').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
-        ft1.1.1: 2022-03-07 17:56:15 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 2}
+        pt1.1.1: 2022-03-08 11:26:49 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 2}
 
 ----------- Request 🚀 ---------------
 url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey         method: POST
 ----------- Response 🛬️ -------------
 type: json
-{'message': '成功', 'data': [{'dataKey': 'c43207b97c17a32b044a21101bad50f8'}, {'dataKey': '41922d28160e2b9a2b3c21f07890c9fb'}], 'code': 200}
-2022-03-07 17:56:15 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': 'c43207b97c17a32b044a21101bad50f8'}, {'dataKey': '41922d28160e2b9a2b3c21f07890c9fb'}], 'code': 200}
-2022-03-07 17:56:15 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': 'c43207b97c17a32b044a21101bad50f8', 'data': '123'}
+{'message': '成功', 'data': [{'dataKey': 'c7f33c56692fa17b45d234828065c89d'}, {'dataKey': 'd0df4ccb6b3a741d7041153114ebaff1'}], 'code': 200}
+2022-03-08 11:26:49 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': 'c7f33c56692fa17b45d234828065c89d'}, {'dataKey': 'd0df4ccb6b3a741d7041153114ebaff1'}], 'code': 200}
 
 ----------- Request 🚀 ---------------
-url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData         method: POST
+url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/batchEncrypt         method: POST
 ----------- Response 🛬️ -------------
 type: json
-{'message': '成功', 'data': '147640952ab8055c547c968d4fe45147', 'code': 200}
-2022-03-07 17:56:16 [DEBUG] 服务器返回结果：{'message': '成功', 'data': '147640952ab8055c547c968d4fe45147', 'code': 200}
-2022-03-07 17:56:16 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/decryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': 'c43207b97c17a32b044a21101bad50f8', 'data': '147640952ab8055c547c968d4fe45147'}
+{'message': '成功', 'data': [{'IDCard1': '2c25cf148a70021ab3232a5993492838'}, {'IDCard2': '458e5766835b987c286d57c019b6de688621376588bfb80f03e0029574f0ab61'}], 'code': 200}
 
 ----------- Request 🚀 ---------------
-url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/decryptData         method: POST
+url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/batchDecrypt         method: POST
 ----------- Response 🛬️ -------------
 type: json
-{'message': '成功', 'data': '123', 'code': 200}
-2022-03-07 17:56:16 [DEBUG] 服务器返回结果：{'message': '成功', 'data': '123', 'code': 200}
-Traceback (most recent call last):
-  File "D:\python3.8\lib\site-packages\parameterized\parameterized.py", line 518, in standalone_func
-    return func(*(a + p.args), **p.kwargs)
-  File "D:\study\seldom_encryption_decryption\test_dir\test_encryption.py", line 54, in test_decrypt_data
-    self.assertEqual(data_, plaintext_data)
-AssertionError: '123' != '14782638746324'
-- 123
-+ 14782638746324
-
+{'message': '成功', 'data': [{'IDCard1': '8273rgdsiff'}, {'IDCard2': 'sdhfisdfh28395743'}], 'code': 200}
 
         </pre>
     </div>
@@ -593,59 +580,46 @@ AssertionError: '123' != '14782638746324'
     <td></td>
 </tr>
 
-<tr id='ft1.1.2' class='none'>
-    <td class='failCase'>
-        <div class='testcase'>test_decrypt_data_1_hdsisahdiasd</div>
+<tr id='pt1.1.2' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_batch_decrypt_1</div>
     </td>
     <td style="color: #495057">
-        <div>解密 [with plaintext_data='hdsisahdiasd']</div>
+        <div>批量解密接口 [with data=['sdhfis34324234', 'sdlofshdfosd...sdkufhisdfsdf', 'sjfgsdifs3333']]</div>
     </td>
     <td style="color: #495057">
-        <div>0.39 s</div>
+        <div>0.48 s</div>
     </td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1.2')" >
-        fail</a>
-    <div id='div_ft1.1.2' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1.2')" >
+        pass</a>
+    <div id='div_pt1.1.2' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1.2').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1.2').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
-        ft1.1.2: 2022-03-07 17:56:16 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 2}
+        pt1.1.2: 2022-03-08 11:26:50 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 4}
 
 ----------- Request 🚀 ---------------
 url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey         method: POST
 ----------- Response 🛬️ -------------
 type: json
-{'message': '成功', 'data': [{'dataKey': '5a1a118490d08e89ffd5f92a4f68b64f'}, {'dataKey': 'ef42b3780561e96709673af8037591a8'}], 'code': 200}
-2022-03-07 17:56:16 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': '5a1a118490d08e89ffd5f92a4f68b64f'}, {'dataKey': 'ef42b3780561e96709673af8037591a8'}], 'code': 200}
-2022-03-07 17:56:16 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': '5a1a118490d08e89ffd5f92a4f68b64f', 'data': '123'}
+{'message': '成功', 'data': [{'dataKey': 'b5c07bf1a3df19b28e3f7c8b5ff1effd'}, {'dataKey': '1c32d1590c22f7c0265899d2d6e3f847'}, {'dataKey': '32175e7f1df5c80da3dba8ef953d92ff'}, {'dataKey': 'b278fbbea1a01866fa7cac994a714b0a'}], 'code': 200}
+2022-03-08 11:26:50 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': 'b5c07bf1a3df19b28e3f7c8b5ff1effd'}, {'dataKey': '1c32d1590c22f7c0265899d2d6e3f847'}, {'dataKey': '32175e7f1df5c80da3dba8ef953d92ff'}, {'dataKey': 'b278fbbea1a01866fa7cac994a714b0a'}], 'code': 200}
 
 ----------- Request 🚀 ---------------
-url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData         method: POST
+url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/batchEncrypt         method: POST
 ----------- Response 🛬️ -------------
 type: json
-{'message': '成功', 'data': '7f3cf1e1aa8a8452e446d6c9ecfc9989', 'code': 200}
-2022-03-07 17:56:16 [DEBUG] 服务器返回结果：{'message': '成功', 'data': '7f3cf1e1aa8a8452e446d6c9ecfc9989', 'code': 200}
-2022-03-07 17:56:16 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/decryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': '5a1a118490d08e89ffd5f92a4f68b64f', 'data': '7f3cf1e1aa8a8452e446d6c9ecfc9989'}
+{'message': '成功', 'data': [{'IDCard1': 'eb1e8ef9eb2cabbea31e6e2130d0de3f'}, {'IDCard2': 'ac2ff77e8cb12ef7820112214471139f'}, {'IDCard3': 'fa399c67ed45a03824faf8a3cea5df82'}, {'IDCard4': 'e723f2cd5491f1cb5cefcdf2b1f896b2'}], 'code': 200}
 
 ----------- Request 🚀 ---------------
-url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/decryptData         method: POST
+url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/batchDecrypt         method: POST
 ----------- Response 🛬️ -------------
 type: json
-{'message': '成功', 'data': '123', 'code': 200}
-2022-03-07 17:56:16 [DEBUG] 服务器返回结果：{'message': '成功', 'data': '123', 'code': 200}
-Traceback (most recent call last):
-  File "D:\python3.8\lib\site-packages\parameterized\parameterized.py", line 518, in standalone_func
-    return func(*(a + p.args), **p.kwargs)
-  File "D:\study\seldom_encryption_decryption\test_dir\test_encryption.py", line 54, in test_decrypt_data
-    self.assertEqual(data_, plaintext_data)
-AssertionError: '123' != 'hdsisahdiasd'
-- 123
-+ hdsisahdiasd
-
+{'message': '成功', 'data': [{'IDCard1': 'sdhfis34324234'}, {'IDCard2': 'sdlofshdfosdhf'}, {'IDCard3': 'sdkufhisdfsdf'}, {'IDCard4': 'sjfgsdifs3333'}], 'code': 200}
 
         </pre>
     </div>
@@ -654,59 +628,42 @@ AssertionError: '123' != 'hdsisahdiasd'
     <td></td>
 </tr>
 
-<tr id='ft1.1.3' class='none'>
-    <td class='failCase'>
-        <div class='testcase'>test_decrypt_data_2_hdsisahdiasd</div>
+<tr id='pt1.1.3' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_batch_encrypt_0</div>
     </td>
     <td style="color: #495057">
-        <div>解密 [with plaintext_data='hdsisahdiasd']</div>
+        <div>批量加密接口 [with case={'case1': '批量加密接口为三时'}, data=['123', '748365345', 'shdfkshdf'], excepted=3]</div>
     </td>
     <td style="color: #495057">
-        <div>0.4 s</div>
+        <div>0.27 s</div>
     </td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1.3')" >
-        fail</a>
-    <div id='div_ft1.1.3' class="popup_window">
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1.3')" >
+        pass</a>
+    <div id='div_pt1.1.3' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1.3').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1.3').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
-        ft1.1.3: 2022-03-07 17:56:16 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 2}
+        pt1.1.3: 2022-03-08 11:26:50 [DEBUG] {'case1': '批量加密接口为三时'}
+2022-03-08 11:26:50 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 3}
 
 ----------- Request 🚀 ---------------
 url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey         method: POST
 ----------- Response 🛬️ -------------
 type: json
-{'message': '成功', 'data': [{'dataKey': '434fe4c8b6a8566fc70cb491ff6dd2c7'}, {'dataKey': '3a356061a06196fbb6f1e07fedfb97a1'}], 'code': 200}
-2022-03-07 17:56:16 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': '434fe4c8b6a8566fc70cb491ff6dd2c7'}, {'dataKey': '3a356061a06196fbb6f1e07fedfb97a1'}], 'code': 200}
-2022-03-07 17:56:16 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': '434fe4c8b6a8566fc70cb491ff6dd2c7', 'data': '123'}
+{'message': '成功', 'data': [{'dataKey': '4b2d1d3458fc8e61876a6d68383be6aa'}, {'dataKey': '2e8124b426e182ef771f81a7941703cc'}, {'dataKey': '21450c7445dd5e0efa37a5da7a3a695c'}], 'code': 200}
+2022-03-08 11:26:50 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': '4b2d1d3458fc8e61876a6d68383be6aa'}, {'dataKey': '2e8124b426e182ef771f81a7941703cc'}, {'dataKey': '21450c7445dd5e0efa37a5da7a3a695c'}], 'code': 200}
+[{'dataKey': '4b2d1d3458fc8e61876a6d68383be6aa'}, {'dataKey': '2e8124b426e182ef771f81a7941703cc'}, {'dataKey': '21450c7445dd5e0efa37a5da7a3a695c'}]
 
 ----------- Request 🚀 ---------------
-url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData         method: POST
+url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/batchEncrypt         method: POST
 ----------- Response 🛬️ -------------
 type: json
-{'message': '成功', 'data': '91a174ff0c72e85bdeb7cdbf2d2e7995', 'code': 200}
-2022-03-07 17:56:16 [DEBUG] 服务器返回结果：{'message': '成功', 'data': '91a174ff0c72e85bdeb7cdbf2d2e7995', 'code': 200}
-2022-03-07 17:56:16 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/decryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': '434fe4c8b6a8566fc70cb491ff6dd2c7', 'data': '91a174ff0c72e85bdeb7cdbf2d2e7995'}
-
------------ Request 🚀 ---------------
-url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/decryptData         method: POST
------------ Response 🛬️ -------------
-type: json
-{'message': '成功', 'data': '123', 'code': 200}
-2022-03-07 17:56:16 [DEBUG] 服务器返回结果：{'message': '成功', 'data': '123', 'code': 200}
-Traceback (most recent call last):
-  File "D:\python3.8\lib\site-packages\parameterized\parameterized.py", line 518, in standalone_func
-    return func(*(a + p.args), **p.kwargs)
-  File "D:\study\seldom_encryption_decryption\test_dir\test_encryption.py", line 54, in test_decrypt_data
-    self.assertEqual(data_, plaintext_data)
-AssertionError: '123' != 'hdsisahdiasd'
-- 123
-+ hdsisahdiasd
-
+{'message': '成功', 'data': [{'IDCard1': '79944af941aff4c2add7e85d57bff707'}, {'IDCard2': 'c9b17f9b56e52f85ee6ebfa2d9a27375'}, {'IDCard3': '70ccfff0217a60fc7241b815a3cbe469'}], 'code': 200}
 
         </pre>
     </div>
@@ -717,13 +674,13 @@ AssertionError: '123' != 'hdsisahdiasd'
 
 <tr id='pt1.1.4' class='hiddenRow'>
     <td class='passCase'>
-        <div class='testcase'>test_encrypt_data_0_14782638746324</div>
+        <div class='testcase'>test_batch_encrypt_1</div>
     </td>
     <td style="color: #495057">
-        <div>测试明文数据加密 [with plaintext_data='14782638746324']</div>
+        <div>批量加密接口 [with case={'case2': '批量加密接口为四时'}, data=['162312', '7598324759834653', '...sdfdsf', 'iuhesfihsdf832658743'], excepted=4]</div>
     </td>
     <td style="color: #495057">
-        <div>0.27 s</div>
+        <div>0.35 s</div>
     </td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
@@ -735,23 +692,22 @@ AssertionError: '123' != 'hdsisahdiasd'
            [x]</a>
         </div>
         <pre>
-        pt1.1.4: 2022-03-07 17:56:16 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 2}
+        pt1.1.4: 2022-03-08 11:26:50 [DEBUG] {'case2': '批量加密接口为四时'}
+2022-03-08 11:26:50 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 4}
 
 ----------- Request 🚀 ---------------
 url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey         method: POST
 ----------- Response 🛬️ -------------
 type: json
-{'message': '成功', 'data': [{'dataKey': '35b5159449076a020c1f3047db8cd3be'}, {'dataKey': '6e533eada3b374f2007e9d46101a0889'}], 'code': 200}
-2022-03-07 17:56:17 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': '35b5159449076a020c1f3047db8cd3be'}, {'dataKey': '6e533eada3b374f2007e9d46101a0889'}], 'code': 200}
-2022-03-07 17:56:17 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': '35b5159449076a020c1f3047db8cd3be', 'data': '14782638746324'}
+{'message': '成功', 'data': [{'dataKey': 'a99df917edefdcdd965bbe0e843f62e3'}, {'dataKey': '0bbf56864a04a35b2a586a6a0716a0f3'}, {'dataKey': 'a2e311647fd462e9124296242e184d00'}, {'dataKey': 'd9f05685e47e99e0af3ce9b76451abfe'}], 'code': 200}
+2022-03-08 11:26:50 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': 'a99df917edefdcdd965bbe0e843f62e3'}, {'dataKey': '0bbf56864a04a35b2a586a6a0716a0f3'}, {'dataKey': 'a2e311647fd462e9124296242e184d00'}, {'dataKey': 'd9f05685e47e99e0af3ce9b76451abfe'}], 'code': 200}
+[{'dataKey': 'a99df917edefdcdd965bbe0e843f62e3'}, {'dataKey': '0bbf56864a04a35b2a586a6a0716a0f3'}, {'dataKey': 'a2e311647fd462e9124296242e184d00'}, {'dataKey': 'd9f05685e47e99e0af3ce9b76451abfe'}]
 
 ----------- Request 🚀 ---------------
-url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData         method: POST
+url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/batchEncrypt         method: POST
 ----------- Response 🛬️ -------------
 type: json
-{'message': '成功', 'data': '071d248ed5a88395ae0ed555a5e2c50f', 'code': 200}
-2022-03-07 17:56:17 [DEBUG] 服务器返回结果：{'message': '成功', 'data': '071d248ed5a88395ae0ed555a5e2c50f', 'code': 200}
-2022-03-07 17:56:17 [DEBUG] 加密后的明文数据071d248ed5a88395ae0ed555a5e2c50f
+{'message': '成功', 'data': [{'IDCard1': '8a027c412f1830df1c30b2aa7160af1a'}, {'IDCard2': '9f90d630418674e638a91f1f28d28b29213fc10808031939dcdc580e7b2a570b'}, {'IDCard3': '9aa72270cbb39d566d22fb2ef2ed72a067153a1467d9647cbbe97ea76c4a9c50'}, {'IDCard4': '4ed01552f5b36c4fe27924d9b438d3850356fc1dc9ef2f2e3fc7722e009b120d'}], 'code': 200}
 
         </pre>
     </div>
@@ -760,7 +716,223 @@ type: json
     <td></td>
 </tr>
 
-<tr id='pt1.1.5' class='hiddenRow'>
+<tr class='passClass'>
+    <td>test_encryption.TestEncryption</td>
+    <td>加解密</td>
+    <td></td>
+    <td>9</td>
+    <td>9</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1.2',9)">Detail</a></td>
+    <td>&nbsp;</td>
+</tr>
+
+<tr id='pt1.2.1' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_decrypt_data_0_14782638746324</div>
+    </td>
+    <td style="color: #495057">
+        <div>解密 [with plaintext_data='14782638746324']</div>
+    </td>
+    <td style="color: #495057">
+        <div>0.4 s</div>
+    </td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2.1')" >
+        pass</a>
+    <div id='div_pt1.2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        pt1.2.1: 2022-03-08 11:26:51 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 2}
+
+----------- Request 🚀 ---------------
+url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey         method: POST
+----------- Response 🛬️ -------------
+type: json
+{'message': '成功', 'data': [{'dataKey': '772cbbd8ff6f78186e881e7b2f4d1c04'}, {'dataKey': '3b6f74df0c955dbd67b800ff4ea5b8bf'}], 'code': 200}
+2022-03-08 11:26:51 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': '772cbbd8ff6f78186e881e7b2f4d1c04'}, {'dataKey': '3b6f74df0c955dbd67b800ff4ea5b8bf'}], 'code': 200}
+2022-03-08 11:26:51 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': '772cbbd8ff6f78186e881e7b2f4d1c04', 'data': '14782638746324'}
+
+----------- Request 🚀 ---------------
+url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData         method: POST
+----------- Response 🛬️ -------------
+type: json
+{'message': '成功', 'data': '9de8fb1dea8c3a253dc7fe9dd8f480ad', 'code': 200}
+2022-03-08 11:26:51 [DEBUG] 服务器返回结果：{'message': '成功', 'data': '9de8fb1dea8c3a253dc7fe9dd8f480ad', 'code': 200}
+2022-03-08 11:26:51 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/decryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': '772cbbd8ff6f78186e881e7b2f4d1c04', 'data': '9de8fb1dea8c3a253dc7fe9dd8f480ad'}
+
+----------- Request 🚀 ---------------
+url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/decryptData         method: POST
+----------- Response 🛬️ -------------
+type: json
+{'message': '成功', 'data': '14782638746324', 'code': 200}
+2022-03-08 11:26:51 [DEBUG] 服务器返回结果：{'message': '成功', 'data': '14782638746324', 'code': 200}
+2022-03-08 11:26:51 [DEBUG] 解密后的明文数据14782638746324
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='pt1.2.2' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_decrypt_data_1_hdsisahdiasd</div>
+    </td>
+    <td style="color: #495057">
+        <div>解密 [with plaintext_data='hdsisahdiasd']</div>
+    </td>
+    <td style="color: #495057">
+        <div>0.38 s</div>
+    </td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2.2')" >
+        pass</a>
+    <div id='div_pt1.2.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        pt1.2.2: 2022-03-08 11:26:51 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 2}
+
+----------- Request 🚀 ---------------
+url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey         method: POST
+----------- Response 🛬️ -------------
+type: json
+{'message': '成功', 'data': [{'dataKey': '337df519276d070e4287e10eeba4fe85'}, {'dataKey': '7d8fc7f326475f47f257d8b069dc3048'}], 'code': 200}
+2022-03-08 11:26:51 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': '337df519276d070e4287e10eeba4fe85'}, {'dataKey': '7d8fc7f326475f47f257d8b069dc3048'}], 'code': 200}
+2022-03-08 11:26:51 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': '337df519276d070e4287e10eeba4fe85', 'data': 'hdsisahdiasd'}
+
+----------- Request 🚀 ---------------
+url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData         method: POST
+----------- Response 🛬️ -------------
+type: json
+{'message': '成功', 'data': '6ec88ce8e4759bb3657019df1ecf3b0e', 'code': 200}
+2022-03-08 11:26:51 [DEBUG] 服务器返回结果：{'message': '成功', 'data': '6ec88ce8e4759bb3657019df1ecf3b0e', 'code': 200}
+2022-03-08 11:26:51 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/decryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': '337df519276d070e4287e10eeba4fe85', 'data': '6ec88ce8e4759bb3657019df1ecf3b0e'}
+
+----------- Request 🚀 ---------------
+url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/decryptData         method: POST
+----------- Response 🛬️ -------------
+type: json
+{'message': '成功', 'data': 'hdsisahdiasd', 'code': 200}
+2022-03-08 11:26:51 [DEBUG] 服务器返回结果：{'message': '成功', 'data': 'hdsisahdiasd', 'code': 200}
+2022-03-08 11:26:51 [DEBUG] 解密后的明文数据hdsisahdiasd
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='pt1.2.3' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_decrypt_data_2_hdsisahdiasd</div>
+    </td>
+    <td style="color: #495057">
+        <div>解密 [with plaintext_data='hdsisahdiasd']</div>
+    </td>
+    <td style="color: #495057">
+        <div>0.39 s</div>
+    </td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2.3')" >
+        pass</a>
+    <div id='div_pt1.2.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        pt1.2.3: 2022-03-08 11:26:51 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 2}
+
+----------- Request 🚀 ---------------
+url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey         method: POST
+----------- Response 🛬️ -------------
+type: json
+{'message': '成功', 'data': [{'dataKey': '8766bc9346371d0bfc555198dfb4b4ab'}, {'dataKey': 'c6a3b796a3544fd27bddabefb8b7a4a2'}], 'code': 200}
+2022-03-08 11:26:52 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': '8766bc9346371d0bfc555198dfb4b4ab'}, {'dataKey': 'c6a3b796a3544fd27bddabefb8b7a4a2'}], 'code': 200}
+2022-03-08 11:26:52 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': '8766bc9346371d0bfc555198dfb4b4ab', 'data': 'hdsisahdiasd'}
+
+----------- Request 🚀 ---------------
+url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData         method: POST
+----------- Response 🛬️ -------------
+type: json
+{'message': '成功', 'data': 'b8d5a748cd95039911a754e49f0ffb7c', 'code': 200}
+2022-03-08 11:26:52 [DEBUG] 服务器返回结果：{'message': '成功', 'data': 'b8d5a748cd95039911a754e49f0ffb7c', 'code': 200}
+2022-03-08 11:26:52 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/decryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': '8766bc9346371d0bfc555198dfb4b4ab', 'data': 'b8d5a748cd95039911a754e49f0ffb7c'}
+
+----------- Request 🚀 ---------------
+url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/decryptData         method: POST
+----------- Response 🛬️ -------------
+type: json
+{'message': '成功', 'data': 'hdsisahdiasd', 'code': 200}
+2022-03-08 11:26:52 [DEBUG] 服务器返回结果：{'message': '成功', 'data': 'hdsisahdiasd', 'code': 200}
+2022-03-08 11:26:52 [DEBUG] 解密后的明文数据hdsisahdiasd
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='pt1.2.4' class='hiddenRow'>
+    <td class='passCase'>
+        <div class='testcase'>test_encrypt_data_0_14782638746324</div>
+    </td>
+    <td style="color: #495057">
+        <div>测试明文数据加密 [with plaintext_data='14782638746324']</div>
+    </td>
+    <td style="color: #495057">
+        <div>0.25 s</div>
+    </td>
+    <td colspan='5' align='center'>
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2.4')" >
+        pass</a>
+    <div id='div_pt1.2.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        pt1.2.4: 2022-03-08 11:26:52 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 2}
+
+----------- Request 🚀 ---------------
+url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey         method: POST
+----------- Response 🛬️ -------------
+type: json
+{'message': '成功', 'data': [{'dataKey': 'f76ded52bea469a6f65355227242eb26'}, {'dataKey': '1dde61f1511693a0e0109c4238496c11'}], 'code': 200}
+2022-03-08 11:26:52 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': 'f76ded52bea469a6f65355227242eb26'}, {'dataKey': '1dde61f1511693a0e0109c4238496c11'}], 'code': 200}
+2022-03-08 11:26:52 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': 'f76ded52bea469a6f65355227242eb26', 'data': '14782638746324'}
+
+----------- Request 🚀 ---------------
+url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData         method: POST
+----------- Response 🛬️ -------------
+type: json
+{'message': '成功', 'data': '5bdfbbc6574b3da77ebff742d8abbc67', 'code': 200}
+2022-03-08 11:26:52 [DEBUG] 服务器返回结果：{'message': '成功', 'data': '5bdfbbc6574b3da77ebff742d8abbc67', 'code': 200}
+2022-03-08 11:26:52 [DEBUG] 加密后的明文数据5bdfbbc6574b3da77ebff742d8abbc67
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+    </td>
+    <td></td>
+</tr>
+
+<tr id='pt1.2.5' class='hiddenRow'>
     <td class='passCase'>
         <div class='testcase'>test_encrypt_data_1_hdsisahdiasd</div>
     </td>
@@ -768,35 +940,35 @@ type: json
         <div>测试明文数据加密 [with plaintext_data='hdsisahdiasd']</div>
     </td>
     <td style="color: #495057">
-        <div>0.24 s</div>
+        <div>0.32 s</div>
     </td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1.5')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2.5')" >
         pass</a>
-    <div id='div_pt1.1.5' class="popup_window">
+    <div id='div_pt1.2.5' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1.5').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2.5').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
-        pt1.1.5: 2022-03-07 17:56:17 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 2}
+        pt1.2.5: 2022-03-08 11:26:52 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 2}
 
 ----------- Request 🚀 ---------------
 url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey         method: POST
 ----------- Response 🛬️ -------------
 type: json
-{'message': '成功', 'data': [{'dataKey': '52b03010bfc1fe3924bf00a1e95ddd25'}, {'dataKey': '945bf4065738d41507ca262e98c8e00d'}], 'code': 200}
-2022-03-07 17:56:17 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': '52b03010bfc1fe3924bf00a1e95ddd25'}, {'dataKey': '945bf4065738d41507ca262e98c8e00d'}], 'code': 200}
-2022-03-07 17:56:17 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': '52b03010bfc1fe3924bf00a1e95ddd25', 'data': 'hdsisahdiasd'}
+{'message': '成功', 'data': [{'dataKey': '4c5af9f375ff63eb8938e93f3759288e'}, {'dataKey': 'b33816e17f81397c8fca5807897bc749'}], 'code': 200}
+2022-03-08 11:26:52 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': '4c5af9f375ff63eb8938e93f3759288e'}, {'dataKey': 'b33816e17f81397c8fca5807897bc749'}], 'code': 200}
+2022-03-08 11:26:52 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': '4c5af9f375ff63eb8938e93f3759288e', 'data': 'hdsisahdiasd'}
 
 ----------- Request 🚀 ---------------
 url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData         method: POST
 ----------- Response 🛬️ -------------
 type: json
-{'message': '成功', 'data': '9dcc992ff457623ed5ab8da929121143', 'code': 200}
-2022-03-07 17:56:17 [DEBUG] 服务器返回结果：{'message': '成功', 'data': '9dcc992ff457623ed5ab8da929121143', 'code': 200}
-2022-03-07 17:56:17 [DEBUG] 加密后的明文数据9dcc992ff457623ed5ab8da929121143
+{'message': '成功', 'data': '746dcabe80083205e6926d2b02cf3b62', 'code': 200}
+2022-03-08 11:26:52 [DEBUG] 服务器返回结果：{'message': '成功', 'data': '746dcabe80083205e6926d2b02cf3b62', 'code': 200}
+2022-03-08 11:26:52 [DEBUG] 加密后的明文数据746dcabe80083205e6926d2b02cf3b62
 
         </pre>
     </div>
@@ -805,7 +977,7 @@ type: json
     <td></td>
 </tr>
 
-<tr id='pt1.1.6' class='hiddenRow'>
+<tr id='pt1.2.6' class='hiddenRow'>
     <td class='passCase'>
         <div class='testcase'>test_encrypt_data_2_hdsisahdiasd</div>
     </td>
@@ -813,35 +985,35 @@ type: json
         <div>测试明文数据加密 [with plaintext_data='hdsisahdiasd']</div>
     </td>
     <td style="color: #495057">
-        <div>0.25 s</div>
+        <div>0.33 s</div>
     </td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1.6')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2.6')" >
         pass</a>
-    <div id='div_pt1.1.6' class="popup_window">
+    <div id='div_pt1.2.6' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1.6').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2.6').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
-        pt1.1.6: 2022-03-07 17:56:17 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 2}
+        pt1.2.6: 2022-03-08 11:26:52 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 2}
 
 ----------- Request 🚀 ---------------
 url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey         method: POST
 ----------- Response 🛬️ -------------
 type: json
-{'message': '成功', 'data': [{'dataKey': 'dbdc568847f7bc4515f84183ad65768e'}, {'dataKey': 'c0c38b18c1b847602a635a118b86b54b'}], 'code': 200}
-2022-03-07 17:56:17 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': 'dbdc568847f7bc4515f84183ad65768e'}, {'dataKey': 'c0c38b18c1b847602a635a118b86b54b'}], 'code': 200}
-2022-03-07 17:56:17 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': 'dbdc568847f7bc4515f84183ad65768e', 'data': 'hdsisahdiasd'}
+{'message': '成功', 'data': [{'dataKey': 'a81c6a717826a8f81402eba120ac8020'}, {'dataKey': '3e8541633341a8264ce171f64fe8ad99'}], 'code': 200}
+2022-03-08 11:26:53 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': 'a81c6a717826a8f81402eba120ac8020'}, {'dataKey': '3e8541633341a8264ce171f64fe8ad99'}], 'code': 200}
+2022-03-08 11:26:53 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'dataKey': 'a81c6a717826a8f81402eba120ac8020', 'data': 'hdsisahdiasd'}
 
 ----------- Request 🚀 ---------------
 url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/encryptData         method: POST
 ----------- Response 🛬️ -------------
 type: json
-{'message': '成功', 'data': '36485e40af0b5496c06ced3034087d84', 'code': 200}
-2022-03-07 17:56:17 [DEBUG] 服务器返回结果：{'message': '成功', 'data': '36485e40af0b5496c06ced3034087d84', 'code': 200}
-2022-03-07 17:56:17 [DEBUG] 加密后的明文数据36485e40af0b5496c06ced3034087d84
+{'message': '成功', 'data': '417a84160b1e91df5906794a634f0ff0', 'code': 200}
+2022-03-08 11:26:53 [DEBUG] 服务器返回结果：{'message': '成功', 'data': '417a84160b1e91df5906794a634f0ff0', 'code': 200}
+2022-03-08 11:26:53 [DEBUG] 加密后的明文数据417a84160b1e91df5906794a634f0ff0
 
         </pre>
     </div>
@@ -850,7 +1022,7 @@ type: json
     <td></td>
 </tr>
 
-<tr id='pt1.1.7' class='hiddenRow'>
+<tr id='pt1.2.7' class='hiddenRow'>
     <td class='passCase'>
         <div class='testcase'>test_get_data_key_0</div>
     </td>
@@ -862,23 +1034,23 @@ type: json
     </td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1.7')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2.7')" >
         pass</a>
-    <div id='div_pt1.1.7' class="popup_window">
+    <div id='div_pt1.2.7' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1.7').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2.7').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
-        pt1.1.7: 2022-03-07 17:56:17 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 1}
+        pt1.2.7: 2022-03-08 11:26:53 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 1}
 
 ----------- Request 🚀 ---------------
 url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey         method: POST
 ----------- Response 🛬️ -------------
 type: json
-{'message': '成功', 'data': [{'dataKey': '48d454f365270d5093cae23f09284193'}], 'code': 200}
-2022-03-07 17:56:17 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': '48d454f365270d5093cae23f09284193'}], 'code': 200}
-2022-03-07 17:56:17 [DEBUG] 返回的密钥[{'dataKey': '48d454f365270d5093cae23f09284193'}]
+{'message': '成功', 'data': [{'dataKey': '028dbaf0a766583bc7d353bf8a135309'}], 'code': 200}
+2022-03-08 11:26:53 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': '028dbaf0a766583bc7d353bf8a135309'}], 'code': 200}
+2022-03-08 11:26:53 [DEBUG] 返回的密钥[{'dataKey': '028dbaf0a766583bc7d353bf8a135309'}]
 
         </pre>
     </div>
@@ -887,7 +1059,7 @@ type: json
     <td></td>
 </tr>
 
-<tr id='pt1.1.8' class='hiddenRow'>
+<tr id='pt1.2.8' class='hiddenRow'>
     <td class='passCase'>
         <div class='testcase'>test_get_data_key_1</div>
     </td>
@@ -895,27 +1067,27 @@ type: json
         <div>测试获取密钥 [with size=2]</div>
     </td>
     <td style="color: #495057">
-        <div>0.13 s</div>
+        <div>0.28 s</div>
     </td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1.8')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2.8')" >
         pass</a>
-    <div id='div_pt1.1.8' class="popup_window">
+    <div id='div_pt1.2.8' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1.8').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2.8').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
-        pt1.1.8: 2022-03-07 17:56:17 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 2}
+        pt1.2.8: 2022-03-08 11:26:53 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 2}
 
 ----------- Request 🚀 ---------------
 url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey         method: POST
 ----------- Response 🛬️ -------------
 type: json
-{'message': '成功', 'data': [{'dataKey': 'b929f69c03ed87a9709760782d10f4f9'}, {'dataKey': 'cd869278aef254d00f65d9e7c9cfbe0d'}], 'code': 200}
-2022-03-07 17:56:17 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': 'b929f69c03ed87a9709760782d10f4f9'}, {'dataKey': 'cd869278aef254d00f65d9e7c9cfbe0d'}], 'code': 200}
-2022-03-07 17:56:17 [DEBUG] 返回的密钥[{'dataKey': 'b929f69c03ed87a9709760782d10f4f9'}, {'dataKey': 'cd869278aef254d00f65d9e7c9cfbe0d'}]
+{'message': '成功', 'data': [{'dataKey': '0716be0fc9eaf0472245acf3c4a412d6'}, {'dataKey': 'd28a000bb68d966c20a99b032ec2464a'}], 'code': 200}
+2022-03-08 11:26:53 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': '0716be0fc9eaf0472245acf3c4a412d6'}, {'dataKey': 'd28a000bb68d966c20a99b032ec2464a'}], 'code': 200}
+2022-03-08 11:26:53 [DEBUG] 返回的密钥[{'dataKey': '0716be0fc9eaf0472245acf3c4a412d6'}, {'dataKey': 'd28a000bb68d966c20a99b032ec2464a'}]
 
         </pre>
     </div>
@@ -924,7 +1096,7 @@ type: json
     <td></td>
 </tr>
 
-<tr id='pt1.1.9' class='hiddenRow'>
+<tr id='pt1.2.9' class='hiddenRow'>
     <td class='passCase'>
         <div class='testcase'>test_get_data_key_2</div>
     </td>
@@ -932,27 +1104,27 @@ type: json
         <div>测试获取密钥 [with size=3]</div>
     </td>
     <td style="color: #495057">
-        <div>0.36 s</div>
+        <div>0.15 s</div>
     </td>
     <td colspan='5' align='center'>
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1.9')" >
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2.9')" >
         pass</a>
-    <div id='div_pt1.1.9' class="popup_window">
+    <div id='div_pt1.2.9' class="popup_window">
         <div style='text-align: right; color:red;cursor:pointer'>
-        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.1.9').style.display = 'none' " >
+        <a onfocus='this.blur();' onclick="document.getElementById('div_pt1.2.9').style.display = 'none' " >
            [x]</a>
         </div>
         <pre>
-        pt1.1.9: 2022-03-07 17:56:17 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 3}
+        pt1.2.9: 2022-03-08 11:26:53 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': 'E04C0921841449D3BC603505A5118EE8', 'size': 3}
 
 ----------- Request 🚀 ---------------
 url: http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey         method: POST
 ----------- Response 🛬️ -------------
 type: json
-{'message': '成功', 'data': [{'dataKey': '29e63846dcd810d33a4e628b415966ed'}, {'dataKey': 'af2bf0d5adc47268f71af3229aa3b482'}, {'dataKey': '2b243dbcec909ab02e07d1ef2a88047e'}], 'code': 200}
-2022-03-07 17:56:18 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': '29e63846dcd810d33a4e628b415966ed'}, {'dataKey': 'af2bf0d5adc47268f71af3229aa3b482'}, {'dataKey': '2b243dbcec909ab02e07d1ef2a88047e'}], 'code': 200}
-2022-03-07 17:56:18 [DEBUG] 返回的密钥[{'dataKey': '29e63846dcd810d33a4e628b415966ed'}, {'dataKey': 'af2bf0d5adc47268f71af3229aa3b482'}, {'dataKey': '2b243dbcec909ab02e07d1ef2a88047e'}]
+{'message': '成功', 'data': [{'dataKey': 'e957d3b612f95b5f568210723d08efd2'}, {'dataKey': '8723274fea4bdd74625cb4dc128e6431'}, {'dataKey': '9981dfe2f8620f84738760dee870e723'}], 'code': 200}
+2022-03-08 11:26:53 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': 'e957d3b612f95b5f568210723d08efd2'}, {'dataKey': '8723274fea4bdd74625cb4dc128e6431'}, {'dataKey': '9981dfe2f8620f84738760dee870e723'}], 'code': 200}
+2022-03-08 11:26:53 [DEBUG] 返回的密钥[{'dataKey': 'e957d3b612f95b5f568210723d08efd2'}, {'dataKey': '8723274fea4bdd74625cb4dc128e6431'}, {'dataKey': '9981dfe2f8620f84738760dee870e723'}]
 
         </pre>
     </div>
@@ -965,9 +1137,9 @@ type: json
                     <td>Total</td>
                     <td> </td>
                     <td> </td>
-                    <td>9</td>
-                    <td class="text text-success">6</td>
-                    <td class="text text-danger">3</td>
+                    <td>13</td>
+                    <td class="text text-success">13</td>
+                    <td class="text text-danger">0</td>
                     <td class="text text-warning">0</td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
@@ -989,7 +1161,7 @@ type: json
         ],
         datasets: [
             {
-                data: [6, 3, 0, 0],
+                data: [13, 0, 0, 0],
                 backgroundColor: [
                     "#10c469",
                     "#f9c851",

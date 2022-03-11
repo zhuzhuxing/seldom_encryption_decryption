@@ -9,24 +9,26 @@ class TestSign(seldom.TestCase):
         self.en = SignPage()
 
     @file_data(file='encrypt_data.json', key="plaintext_data")
-    def test_sign_data(self, data):
+    def test_sign_data(self, case, data):
         """
         数据签名接口
         :param data:签名数据
         :return:
         """
+        self.en.log.debug(case)
         self.en.sign_data(data)
         self.assertEqual(self.response['message'], '成功')
         self.assertStatusCode(200)
 
     @file_data(file='encrypt_data.json', key="plaintext_data")
-    def test_verify_data(self, data):
+    def test_verify_data(self, case, data):
         """
         数据验签接口
         :param data:签名数据
         :return
         """
         # 获取签名值
+        self.en.log.debug(case)
         signature= self.en.sign_data(data)
         # 验签接口返回为boolean类型
         data = self.en.verify_data(data, signature)

@@ -1,0 +1,18 @@
+{
+  "file": [
+    ["case1:加密0KB文件","./test_data/encrypt_file/file/0kb文件.pdf"],
+    ["case2:加密docx文件","./test_data/encrypt_file/file/docx文件.docx"],
+    ["case3:加密doc文件", "./test_data/encrypt_file/file/doc文件.doc"],
+    ["case4:加密jmx文件", "./test_data/encrypt_file/file/jmx文件.jmx"],
+    ["case5:加密ofd文件", "./test_data/encrypt_file/file/ofd文件.ofd"],
+    ["case6:加密pdf文件", "./test_data/encrypt_file/file/pdf文件.pdf"],
+    ["case7:加密pptx文件", "./test_data/encrypt_file/file/pptx文件.pptx"],
+    ["case8:加密ppt文件", "./test_data/encrypt_file/file/ppt文件.ppt"],
+    ["case9:加密txt文件", "./test_data/encrypt_file/file/txt文件.txt"],
+    ["case10:加密wps文件", "./test_data/encrypt_file/file/wps后缀文件.wps"],
+    ["case11:加密xlsx文件", "./test_data/encrypt_file/file/xlsx文件.xlsx"],
+    ["case12:加密xls文件", "./test_data/encrypt_file/file/xls文件.xls"],
+    ["case13:加密xmind文件", "./test_data/encrypt_file/file/xmind文件.xmind"],
+    ["case14:加密压缩包文件", "./test_data/encrypt_file/file/压缩包文件.zip"]
+  ]
+}

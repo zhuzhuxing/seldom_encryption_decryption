@@ -30,9 +30,10 @@ class EncryptionPage(seldom.TestCase):
         self.log.debug(f"发送post请求，请求地址{url}, 请求参数{body}")
         self.post(url=url,headers=self.headers,json=body)
         self.log.debug(f"服务器返回结果：{self.response}")
-        # 将返回的数据密钥赋值给dataKey
-        dataKey = self.response['data']
-        return dataKey
+        if self.response['code'] == 200:
+            # 将返回的数据密钥赋值给dataKey
+            dataKey = self.response['data']
+            return dataKey
 
     def encrypt_data(self, dataKey, plaintext_data):
         """
@@ -58,7 +59,6 @@ class EncryptionPage(seldom.TestCase):
         self.log.debug(f"发送post请求，请求地址{url}, 请求参数{body}")
         self.post(url=url, headers= self.headers, json=body)
         self.log.debug(f"服务器返回结果：{self.response}")
-        return self.response['data']
 
     def decrypt_data(self, dataKey, ciphertext_data):
         """

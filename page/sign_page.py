@@ -1,6 +1,6 @@
 import seldom
 from page.basic import Basic
-
+from seldom.logging import log
 
 class SignPage(seldom.TestCase):
     def __init__(self):
@@ -9,6 +9,7 @@ class SignPage(seldom.TestCase):
         self.headers ={
             "Content-Type": "application/json"
         }
+        self.log = log
 
     # def get_data_key(self, size):
     #     """

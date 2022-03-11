@@ -23,7 +23,6 @@ class TestEncryption(seldom.TestCase):
         # 获得密钥的个数
         total = len(self.response['data'])
         self.assertEqual(total, size)
-        self.en.log.debug(f"返回的密钥{self.response['data']}")
 
     @file_data(file='get_key.json', key='abnormal_size')
     def test_get_data_key02(self, case, size):
@@ -59,7 +58,8 @@ class TestEncryption(seldom.TestCase):
         datakeys = self.en.get_data_key(size=1)
         dataKey = datakeys[0]['dataKey']
         # 获取加密后的明文数据
-        data = self.en.encrypt_data(dataKey, plaintext_data)
+        self.en.encrypt_data(dataKey, plaintext_data)
+        data = self.response['data']
         # 解密
         self.en.decrypt_data(dataKey, data)
         # 解密后的明文数据

@@ -10,8 +10,9 @@ class TestFileEncryption(seldom.TestCase):
         self.en = FileEncryptionPage()
 
     @file_data(file='entry_file.json', key="file")
-    def test_encrypt_file(self, file):
+    def test_encrypt_file(self, case, file):
         """文件加密接口测试"""
+        self.en.log.debug(case)
         dataKeys = self.en.get_data_key(1)
         dataKey = dataKeys[0]['dataKey']
         # 文件编码后的内容
@@ -21,9 +22,10 @@ class TestFileEncryption(seldom.TestCase):
         self.en.log.debug(f'文件加密后的内容编码为{data_base64}')
 
 
-    @file_data(file='entry_file.json', key='file')
-    def test_decrypt_file(self, re_file):
+    @file_data(file='decrypt.json', key='file')
+    def test_decrypt_file(self, case, re_file):
         """文件解密接口测试"""
+        self.en.log.debug(case)
         dataKeys = self.en.get_data_key(1)
         dataKey = dataKeys[0]['dataKey']
         # 文件编码后的内容

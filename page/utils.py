@@ -20,4 +20,3 @@ if __name__ == '__main__':
     str_base64 = util.file_base64(file_path='../test_data/data.json')
     print(str_base64)
 
-

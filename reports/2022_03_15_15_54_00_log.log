@@ -1,2 +1,0 @@
-2022-03-15 15:54:03 [DEBUG] 发送post请求，请求地址http://10.253.31.25:55556/risen-pcip-sm/api/public/api/getDataKey, 请求参数{'appCode': '8CC5CF6966BB4F0E92B4983AC8CB34F5', 'size': 1}
-2022-03-15 15:54:03 [DEBUG] 服务器返回结果：{'message': '成功', 'data': [{'dataKey': '5bfb2d3b27358d2c5980276c6705aa8a'}], 'code': 200}
